@@ -1,0 +1,149 @@
+.vitrine {
+  height: 100vh;
+  padding: 0 120px;
+  display: flex;
+  align-items: center;
+  background: #0b0e11;
+  color: #cfe9ff;
+}
+
+/* LEFT */
+.side-balloons {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.side-balloon {
+  width: 52px;
+  opacity: 0.45;
+  cursor: pointer;
+  transition: 0.3s;
+
+  img {
+    width: 100%;
+  }
+
+  &.active,
+  &:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* CENTER */
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  position: relative;
+  width: 520px;
+  height: 520px;
+}
+
+/* MASK */
+.circle-mask {
+  position: absolute;
+  inset: 14%;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.snow {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  opacity: 0.25;
+  animation: snowMove linear infinite;
+
+  &.back {
+    top: 0;
+    animation-duration: 60s;
+  }
+
+  &.front {
+    bottom: -40px;
+    animation-duration: 30s;
+  }
+}
+
+.palm {
+  position: absolute;
+  right: 10%;
+  bottom: -10px;
+  width: 220px;
+  opacity: 0.4;
+}
+
+/* BALLOON */
+.balloon-image {
+  position: absolute;
+  width: 52%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: fadeScale 0.6s ease;
+}
+
+/* RING */
+.progress-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+  z-index: 3;
+}
+
+.progress-ring circle {
+  fill: none;
+  stroke: rgba(207, 233, 255, 0.9);
+  stroke-width: 1.5;
+  stroke-dasharray: 302;
+  animation: ringProgress 15.1s linear infinite;
+}
+
+@keyframes ringProgress {
+  from {
+    stroke-dashoffset: 302;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* RIGHT */
+.info {
+  width: 380px;
+}
+
+.applications {
+  display: flex;
+  gap: 18px;
+  margin: 24px 0;
+}
+
+/* misc */
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes snowMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px);
+  }
+}

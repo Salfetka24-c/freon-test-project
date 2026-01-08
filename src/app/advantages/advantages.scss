@@ -1,0 +1,159 @@
+.advantages-section {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  overflow: hidden;
+}
+
+/* Шари фону */
+.bg-rain,
+.bg-steam {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Дощ */
+.bg-rain {
+  background-image: url('/assets/advantages/snow rain.png');
+  background-repeat: repeat;
+  background-position: unset;
+  mix-blend-mode: screen;
+  background-color: var(--main-light);
+  z-index: 1;
+}
+
+/* Пар */
+.bg-steam {
+  background-image: url('/assets/advantages/steam.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35; /* 👈 КЛЮЧОВЕ */
+  z-index: 2;
+  mix-blend-mode: screen; /* 👈 КЛЮЧОВЕ */
+  pointer-events: none;
+}
+
+/* Градієнт */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(360deg, #7ec3ea 10.67%, #ffffff 100%);
+  background-repeat: no-repeat;
+  background-position: center top;
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+
+/* Контент */
+.content {
+  position: relative;
+  z-index: 4;
+  height: 100%;
+  padding: 80px 60px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Заголовки */
+.titles {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.small-title {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.875vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: #005799;
+}
+
+.big-title {
+  position: absolute;
+  left: 50%;
+  top: -0.15vh;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 8.9vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-50%);
+}
+
+/* Картки */
+.bar {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.card {
+  //width: 260px;
+  //height: 360px;
+  // background: rgba(0, 0, 0, 0.7);
+  //border-radius: 16px;
+  padding: 32px 20px;
+  // display: flex;
+  //flex-direction: column;
+  // align-items: center;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  //box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  transition: 0.25s ease;
+
+  width: 13.75vw;
+  height: 21.66vw;
+  background-color: white;
+  border-radius: 0.26vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.78125vw 0.78125vw;
+  transition: box-shadow 0.5s ease;
+  box-shadow: var(--light-shadow);
+}
+
+.card:hover {
+  box-shadow: var(--dark-shadow);
+}
+
+.card img {
+  width: 90px;
+  margin-bottom: 24px;
+}
+
+.card h3 {
+  color: #8ec6ff;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.card p {
+  color: #8a8a8a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Кнопка */
+.bottom button {
+  background: #63aef2;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.bottom button:hover {
+  background: #4f9adf;
+}

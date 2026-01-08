@@ -1,0 +1,65 @@
+.site-header {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  background: #0b0f14;
+}
+
+/* logo */
+.logo {
+  height: 56px;
+}
+
+/* right block */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* buttons base */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* callback */
+.callback {
+  background: #55a7e0;
+  color: #000;
+  border: none;
+}
+
+/* phone */
+.phone {
+  background: transparent;
+  color: #9fd6ff;
+  border: 1px solid #2b4c66;
+}
+
+/* language */
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid #2b4c66;
+  border-radius: 10px;
+  color: #9fd6ff;
+  cursor: pointer;
+}

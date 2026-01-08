@@ -1,0 +1,21 @@
+<section class="assortiment">
+    <h2 class="title">ASSORTIMENT</h2>
+
+    <div class="bar">
+        <div class="card" *ngFor="let p of productService.products()">
+            <div class="image-wrap">
+                <img [src]="p.image" alt="" />
+            </div>
+
+            <h3>{{ p.name }}</h3>
+
+            <p class="price">
+                Price: <span>{{ p.price }}</span> грн
+            </p>
+
+            <button (click)="productService.increment(p.code)">
+                BUY
+            </button>
+        </div>
+    </div>
+</section>

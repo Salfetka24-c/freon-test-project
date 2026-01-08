@@ -1,0 +1,54 @@
+<section class="order">
+    <h2 class="order-title">MAKE ORDER</h2>
+
+    <div class="order-card">
+        <!-- Header -->
+        <div class="order-head">
+            <span>Name</span>
+            <span>Quantity</span>
+            <span>Price</span>
+            <span>Amount</span>
+        </div>
+
+        <!-- Rows -->
+        <div class="order-rows">
+            <div class="order-row" *ngFor="let p of productService.products()">
+                <!-- Product -->
+                <div class="cell product">
+                    <img [src]="p.image" alt="" />
+                    <strong>{{ p.name }}</strong>
+                </div>
+
+                <!-- Quantity -->
+                <div class="cell qty">
+                    <button (click)="productService.decrement(p.code)">−</button>
+
+                    <input #qtyInput type="number" min="0" max="1000" [value]="p.qty"
+                        (keydown.enter)="applyQty(p.code, qtyInput.value)" (blur)="applyQty(p.code, qtyInput.value)" />
+
+                    <button (click)="productService.increment(p.code)">+</button>
+                </div>
+
+                <!-- Price -->
+                <div class="cell price">
+                    {{ p.price }} <small>euro</small>
+                </div>
+
+                <!-- Amount -->
+                <div class="cell amount">
+                    {{ p.qty * p.price }} <small>euro</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Footer -->
+        <div class="order-footer">
+            <span class="together">Together</span>
+            <span class="total-qty">{{ totalQty }}</span>
+            <span class="total-price">{{ totalPrice }} euro</span>
+            <button class="order-btn">MAKE ORDER</button>
+        </div>
+    </div>
+</section>
