@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { HeroSection } from './components/hero-section/hero-section';
 import { Advantages } from './components/advantages/advantages';
@@ -16,8 +15,6 @@ import { FeedbackModal } from './modals/feedback-modal/feedback-modal';
   selector: 'app-root',
   standalone: true,
   imports: [
-    NgIf,
-    RouterOutlet,
     Header,
     HeroSection,
     Advantages,
