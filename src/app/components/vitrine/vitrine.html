@@ -2,10 +2,12 @@
 
     <!-- LEFT -->
     <div class="side-balloons">
-        <div class="side-balloon" *ngFor="let b of balloons; let i = index" [class.active]="i === activeIndex"
+        @for (imgSrc of ballonsImgSrc; track imgSrc; let i = $index) {
+        <div class="side-balloon" [class.active]="i === activeIndex"
             (click)="select(i)">
-            <img [src]="b" />
+            <img [src]="imgSrc" />
         </div>
+        }
     </div>
 
     <!-- CENTER -->

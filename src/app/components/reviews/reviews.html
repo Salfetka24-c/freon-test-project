@@ -2,7 +2,8 @@
     <p class="reviews-title">REVIEWS</p>
 
     <div class="reviews-container">
-        <div class="review-card" *ngFor="let review of reviews">
+        @for (review of reviews; track review.id) {
+        <div class="review-card">
             <div class="avatar">
                 <img class="avatar-photo" src="/assets/reviews/Ellipse.png" alt="avatar" />
                 <img class="avatar-frame" src="/assets/reviews/border.png" alt="frame" />
@@ -12,6 +13,7 @@
                 <p class="review-content">{{ review.content }}</p>
             </div>
         </div>
+        }
         <button class="feedback-btn" (click)="modal.open('feedback')">
             WRITE FEEDBACK
         </button>

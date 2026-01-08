@@ -13,7 +13,7 @@ export class Vitrine implements OnInit, OnDestroy {
   private platformId = inject(PLATFORM_ID);
   private cdr = inject(ChangeDetectorRef);
 
-  balloons = [
+  ballonsImgSrc = [
     'assets/ballons/aqua512.png',
     'assets/ballons/blue512.png',
     'assets/ballons/orange512.png',
@@ -43,7 +43,7 @@ export class Vitrine implements OnInit, OnDestroy {
   }
 
   next(): void {
-    this.activeIndex = (this.activeIndex + 1) % this.balloons.length;
+    this.activeIndex = (this.activeIndex + 1) % this.ballonsImgSrc.length;
 
     // перезапуск CSS-анімації
     this.ringKey++;

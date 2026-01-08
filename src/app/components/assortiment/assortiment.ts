@@ -4,7 +4,7 @@ import { ProductService } from './../../services/product.service';
 
 @Component({
   selector: 'app-assortiment',
-  standalone: true, // 🔥 ОСЬ ЦЕ
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './assortiment.html',
   styleUrl: './assortiment.scss',

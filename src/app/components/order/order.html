@@ -12,33 +12,35 @@
 
         <!-- Rows -->
         <div class="order-rows">
-            <div class="order-row" *ngFor="let p of productService.products()">
+            @for (product of productService.products(); track product.id) {
+            <div class="order-row">
                 <!-- Product -->
                 <div class="cell product">
-                    <img [src]="p.image" alt="" />
-                    <strong>{{ p.name }}</strong>
+                    <img [src]="product.image" alt="" />
+                    <strong>{{ product.name }}</strong>
                 </div>
 
                 <!-- Quantity -->
                 <div class="cell qty">
-                    <button (click)="productService.decrement(p.code)">−</button>
+                    <button (click)="productService.decrement(product.code)">−</button>
 
-                    <input #qtyInput type="number" min="0" max="1000" [value]="p.qty"
-                        (keydown.enter)="applyQty(p.code, qtyInput.value)" (blur)="applyQty(p.code, qtyInput.value)" />
+                    <input #qtyInput type="number" min="0" max="1000" [value]="product.qty"
+                        (keydown.enter)="applyQty(product.code, qtyInput.value)" (blur)="applyQty(product.code, qtyInput.value)" />
 
-                    <button (click)="productService.increment(p.code)">+</button>
+                    <button (click)="productService.increment(product.code)">+</button>
                 </div>
 
                 <!-- Price -->
                 <div class="cell price">
-                    {{ p.price }} <small>euro</small>
+                    {{ product.price }} <small>euro</small>
                 </div>
 
                 <!-- Amount -->
                 <div class="cell amount">
-                    {{ p.qty * p.price }} <small>euro</small>
+                    {{ product.qty * product.price }} <small>euro</small>
                 </div>
             </div>
+            }
         </div>
 
         <div class="divider"></div>
