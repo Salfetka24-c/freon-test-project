@@ -1,13 +1,19 @@
 <app-header></app-header>
-<app-callback-modal *ngIf="modal.is('callback')">
+@if (modal.is('callback')) {
+<app-callback-modal>
 </app-callback-modal>
+}
+
 <app-hero-section></app-hero-section>
 <app-advantages></app-advantages>
-<app-certificates-modal *ngIf="modal.is('certificates')">
+@if (modal.is('certificates')) {
+<app-certificates-modal>
 </app-certificates-modal>
+}
 <app-vitrine></app-vitrine>
 <app-assortiment></app-assortiment>
 <app-reviews></app-reviews>
-<app-feedback-modal *ngIf="modal.is('feedback')">
-</app-feedback-modal>
+@if (modal.is('feedback')) {
+<app-feedback-modal></app-feedback-modal>
+}
 <app-order></app-order>

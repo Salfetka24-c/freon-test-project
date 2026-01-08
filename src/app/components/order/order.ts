@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductService } from '../services/product';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-order',

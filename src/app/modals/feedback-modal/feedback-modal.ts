@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalService } from '../../../core/modal.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-feedback-modal',

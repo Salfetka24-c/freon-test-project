@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalService } from '../.../../core/modal.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-header',

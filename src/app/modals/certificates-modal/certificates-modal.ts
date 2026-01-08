@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ModalService } from '../../../core/modal.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
-  selector: 'app-callback-modal',
+  selector: 'app-certificates-modal',
   standalone: true,
   imports: [CommonModule],
   template: `
     <div class="modal-backdrop" (click)="close()"></div>
-
     <div class="modal">
       <div class="modal-header">
         <button class="back-btn" (click)="close()">←</button>
-        <h2>WE’LL CALL BACK</h2>
+
+        <h2>CERTIFICATES</h2>
+
+        <div class="certs">
+          <img src="assets/ballons/blue512.png" />
+          <img src="assets/ballons/orange512.png" />
+          <img src="assets/ballons/aqua512.png" />
+        </div>
       </div>
-
-      <input placeholder="First name" />
-      <input placeholder="Your city" />
-      <input placeholder="Phone number" />
-
-      <button>MAKE ORDER</button>
     </div>
   `,
 })
-export class CallbackModal {
+export class CertificatesModal {
   constructor(private modal: ModalService) {}
 
   close() {

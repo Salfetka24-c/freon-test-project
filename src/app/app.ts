@@ -1,17 +1,16 @@
 import { Component, signal } from '@angular/core';
-import { NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { Header } from './header/header';
-import { HeroSection } from './hero-section/hero-section';
-import { Advantages } from './advantages/advantages';
-import { Vitrine } from './vitrine/vitrine';
-import { Assortiment } from './assortiment/assortiment';
-import { Reviews } from './reviews/reviews';
-import { Order } from './order/order';
-import { ModalService } from './core/modal.service';
-import { CallbackModal } from './modals/callback/callback-modal/callback-modal'; // ✅ ДОДАТИ
-import { CertificatesModal } from './modals/certificates/certificates-modal/certificates-modal';
-import { FeedbackModal } from './modals/feedback/feedback-modal/feedback-modal';
+import { Header } from './components/header/header';
+import { HeroSection } from './components/hero-section/hero-section';
+import { Advantages } from './components/advantages/advantages';
+import { Vitrine } from './components/vitrine/vitrine';
+import { Assortiment } from './components/assortiment/assortiment';
+import { Reviews } from './components/reviews/reviews';
+import { Order } from './components/order/order';
+import { ModalService } from './services/modal.service';
+import { CallbackModal } from './modals/callback-modal/callback-modal';
+import { CertificatesModal } from './modals/certificates-modal/certificates-modal';
+import { FeedbackModal } from './modals/feedback-modal/feedback-modal';
 
 @Component({
   selector: 'app-root',
