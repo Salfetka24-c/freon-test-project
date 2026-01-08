@@ -69,7 +69,7 @@
 .small-title {
   font-style: italic;
   font-weight: bold;
-  font-size: 1.875vw;
+  font-size: 36px;
   text-align: center;
   text-transform: uppercase;
   color: #005799;
@@ -81,11 +81,12 @@
   top: -0.15vh;
   font-style: italic;
   font-weight: bold;
-  font-size: 8.9vw;
+  font-size: 170px;
   text-align: center;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   transform: translateX(-50%);
+  user-select: none;
 }
 
 /* Картки */
@@ -109,14 +110,14 @@
   //box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
   transition: 0.25s ease;
 
-  width: 13.75vw;
-  height: 21.66vw;
+  width: 264px;
+  height: 416px;
   background-color: white;
-  border-radius: 0.26vw;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0.78125vw 0.78125vw;
+  margin: 0 15px 15px;
   transition: box-shadow 0.5s ease;
   box-shadow: var(--light-shadow);
 }

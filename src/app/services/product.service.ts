@@ -3,7 +3,7 @@ import { Product } from '../models/product.model';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  readonly MAX_QTY = 1000;
+  private readonly MAX_QTY = 1000;
 
   products = signal<Product[]>([
     {
@@ -48,21 +48,21 @@ export class ProductService {
     },
   ]);
 
-  increment(code: string) {
+  increment(id: number) {
     this.products.update((list) =>
-      list.map((p) => (p.code === code ? { ...p, qty: Math.min(p.qty + 1, this.MAX_QTY) } : p))
+      list.map((item) => (item.id === id ? { ...item, qty: Math.min(item.qty + 1, this.MAX_QTY) } : item))
     );
   }
 
-  decrement(code: string) {
+  decrement(id: number) {
     this.products.update((list) =>
-      list.map((p) => (p.code === code ? { ...p, qty: Math.max(p.qty - 1, 0) } : p))
+      list.map((item) => (item.id === id ? { ...item, qty: Math.max(item.qty - 1, 0) } : item))
     );
   }
 
-  setQty(code: string, value: number) {
+  setQty(id: number, value: number) {
     const safe = Math.max(0, Math.min(this.MAX_QTY, value || 0));
 
-    this.products.update((list) => list.map((p) => (p.code === code ? { ...p, qty: safe } : p)));
+    this.products.update((list) => list.map((item) => (item.id === id ? { ...item, qty: safe } : item)));
   }
 }

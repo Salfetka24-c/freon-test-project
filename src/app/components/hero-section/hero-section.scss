@@ -28,7 +28,7 @@
 /* ===== palms ===== */
 .palm {
   position: absolute;
-  bottom: 120px;
+  bottom: 40px;
   transform-origin: bottom center;
   animation: palmSwing 6s ease-in-out infinite;
 }
@@ -60,8 +60,8 @@
 /* ===== penguins ===== */
 .penguins {
   position: absolute;
-  bottom: 140px;
-  left: 60px;
+  bottom: 0;
+  left: 0;
   width: 520px;
   z-index: 5;
 }
@@ -137,7 +137,7 @@
     background-position: 0 0;
   }
   to {
-    background-position: 0 700px;
+    background-position: -550px 700px;
   }
 }
 
@@ -184,7 +184,7 @@
 }
 
 .snow.back {
-  bottom: 90px;
+  bottom: 0px;
   opacity: 0.7;
 }
 

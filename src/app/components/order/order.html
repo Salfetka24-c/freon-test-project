@@ -22,12 +22,12 @@
 
                 <!-- Quantity -->
                 <div class="cell qty">
-                    <button (click)="productService.decrement(product.code)">−</button>
+                    <button (click)="productService.decrement(product.id)">−</button>
 
                     <input #qtyInput type="number" min="0" max="1000" [value]="product.qty"
-                        (keydown.enter)="applyQty(product.code, qtyInput.value)" (blur)="applyQty(product.code, qtyInput.value)" />
+                        (keydown.enter)="applyQty(product.id, qtyInput.value)" (blur)="applyQty(product.id, qtyInput.value)" />
 
-                    <button (click)="productService.increment(product.code)">+</button>
+                    <button (click)="productService.increment(product.id)">+</button>
                 </div>
 
                 <!-- Price -->

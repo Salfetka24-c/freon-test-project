@@ -1,5 +1,5 @@
 .reviews-section {
-  background-color: #0c0f12;
+  background-color: #a8c9ea;
   padding: 60px 20px;
   text-align: center;
   color: #9ecbff;
@@ -19,6 +19,7 @@
     .review-card {
       display: flex;
       align-items: flex-start;
+      gap: 16px;
       background-color: #10151a;
       border-radius: 16px;
       padding: 20px;

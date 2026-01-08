@@ -1,7 +1,7 @@
 .assortiment {
   width: 100%;
   padding: 80px 40px 120px;
-  background: radial-gradient(circle at center, #0f1419 0%, #07090c 60%, #050608 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #8ba5cd 60%, #b8cefa 100%);
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
 .card {
   width: 260px;
   min-height: 520px;
-  background: linear-gradient(180deg, #0c1116, #080b0f);
+  background: linear-gradient(180deg, #83baf1, #83b4f3);
   border-radius: 12px;
   padding: 24px 20px 32px;
   position: relative;
@@ -49,7 +49,7 @@
   max-height: 100%;
   max-width: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0 10px 25px rgba(255, 255, 255, 0.7));
 }
 
 .card h3 {

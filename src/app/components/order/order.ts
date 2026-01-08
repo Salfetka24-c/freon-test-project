@@ -7,7 +7,7 @@ import { ProductService } from '../../services/product.service';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './order.html',
-  styleUrls: ['./order.scss'], // ⬅️ ОСЬ ЦЕ
+  styleUrls: ['./order.scss'],
 })
 export class Order {
   constructor(public productService: ProductService) {}
@@ -19,11 +19,13 @@ export class Order {
   get totalPrice(): number {
     return this.productService.products().reduce((sum, p) => sum + p.qty * p.price, 0);
   }
-  applyQty(code: string, rawValue: string) {
+  applyQty(id: number, rawValue: string) {
     const value = Number(rawValue);
 
     if (isNaN(value)) return;
 
-    this.productService.setQty(code, value);
+    this.productService.
+
+    this.productService.setQty(id, value);
   }
 }
