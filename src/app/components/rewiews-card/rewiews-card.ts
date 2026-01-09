@@ -7,7 +7,7 @@ import { Review } from '../../models/review.model';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './rewiews-card.html',
-  styleUrls: ['./rewiews-card.scss']
+  styleUrls: ['./rewiews-card.scss'],
 })
 export class ReviewCard {
   @Input({ required: true }) data!: Review;

@@ -1,15 +1,11 @@
 <div class="reviews-section">
-    <p class="reviews-title">REVIEWS</p>
+  <p class="reviews-title">REVIEWS</p>
 
-    <div class="reviews-container">
+  <div class="reviews-container">
+    @for (review of service.reviews(); track review.id) {
+      <app-review-card [data]="review" />
+    }
 
-        @for (review of service.reviews(); track review.id) {
-        <app-review-card [data]="review" />
-        }
-
-        <button class="feedback-btn" (click)="modal.open('feedback')">
-            WRITE FEEDBACK
-        </button>
-
-    </div>
+    <button class="btn" (click)="modal.open('feedback')">WRITE FEEDBACK</button>
+  </div>
 </div>

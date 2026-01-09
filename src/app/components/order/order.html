@@ -1,53 +1,52 @@
 <section class="order">
-    <h2 class="order-title">MAKE ORDER</h2>
+  <h2 class="order-title">MAKE ORDER</h2>
 
-    <div class="order-card">
-
-        <div class="order-head">
-            <span>Name</span>
-            <span>Quantity</span>
-            <span>Price</span>
-            <span>Amount</span>
-        </div>
-
-
-        <div class="order-rows">
-            @for (product of productService.products(); track product.id) {
-            <div class="order-row">
-         
-                <div class="cell product">
-                    <img [src]="product.image" alt="" />
-                    <strong>{{ product.name }}</strong>
-                </div>
-
-                <div class="cell qty">
-                    <button (click)="productService.decrement(product.id)">−</button>
-
-                    <input #qtyInput type="number" min="0" max="1000" [value]="product.qty"
-                        (keydown.enter)="applyQty(product.id, qtyInput.value)" (blur)="applyQty(product.id, qtyInput.value)" />
-
-                    <button (click)="productService.increment(product.id)">+</button>
-                </div>
-
-                <div class="cell price">
-                    {{ product.price }} <small>euro</small>
-                </div>
-
-                <div class="cell amount">
-                    {{ product.qty * product.price }} <small>euro</small>
-                </div>
-            </div>
-            }
-        </div>
-
-        <div class="divider"></div>
-
- 
-        <div class="order-footer">
-            <span class="together">Together</span>
-            <span class="total-qty">{{ totalQty }}</span>
-            <span class="total-price">{{ totalPrice }} euro</span>
-            <button class="order-btn">MAKE ORDER</button>
-        </div>
+  <div class="order-card">
+    <div class="order-head">
+      <span>Name</span>
+      <span>Quantity</span>
+      <span>Price</span>
+      <span>Amount</span>
     </div>
+
+    <div class="order-rows">
+      @for (product of productService.products(); track product.id) {
+        <div class="order-row">
+          <div class="cell product">
+            <img [src]="product.image" alt="" />
+            <strong>{{ product.name }}</strong>
+          </div>
+
+          <div class="cell qty">
+            <button (click)="productService.decrement(product.id)">−</button>
+
+            <input
+              #qtyInput
+              type="number"
+              min="0"
+              max="1000"
+              [value]="product.qty"
+              (keydown.enter)="applyQty(product.id, qtyInput.value)"
+              (blur)="applyQty(product.id, qtyInput.value)"
+            />
+
+            <button (click)="productService.increment(product.id)">+</button>
+          </div>
+
+          <div class="cell price">{{ product.price }} <small>euro</small></div>
+
+          <div class="cell amount">{{ product.qty * product.price }} <small>euro</small></div>
+        </div>
+      }
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="order-footer">
+      <span class="together">Together</span>
+      <span class="total-qty">{{ totalQty }}</span>
+      <span class="total-price">{{ totalPrice }} euro</span>
+      <button class="btn">MAKE ORDER</button>
+    </div>
+  </div>
 </section>

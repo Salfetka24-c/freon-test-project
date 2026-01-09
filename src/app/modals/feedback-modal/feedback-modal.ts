@@ -15,7 +15,6 @@ import { ModalService } from '../../services/modal.service';
       <input placeholder="First name" />
       <input placeholder="Second name" />
 
-
       <label class="file">
         📎 Attach image
         <input type="file" hidden (change)="onFile($event)" />

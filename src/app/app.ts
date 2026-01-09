@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './components/header/header';
-import { HeroSection } from './components/hero-section/hero-section';
+import { MainSection } from './components/main-section/main-section';
 import { AdvantagesComponent } from './components/advantages/advantages';
 import { Vitrine } from './components/vitrine/vitrine';
 import { Assortiment } from './components/assortiment/assortiment';
@@ -16,7 +16,7 @@ import { FeedbackModal } from './modals/feedback-modal/feedback-modal';
   standalone: true,
   imports: [
     Header,
-    HeroSection,
+    MainSection,
     AdvantagesComponent,
     Vitrine,
     Assortiment,
@@ -30,6 +30,6 @@ import { FeedbackModal } from './modals/feedback-modal/feedback-modal';
   styleUrl: './app.scss',
 })
 export class App {
-  constructor(public modal: ModalService) {}
+  constructor(public modal: ModalService) { }
   protected readonly title = signal('angular-course');
 }

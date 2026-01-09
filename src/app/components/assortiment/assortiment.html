@@ -1,23 +1,21 @@
 <section class="assortiment">
-    <h2 class="title">ASSORTIMENT</h2>
+  <h2 class="title">ASSORTIMENT</h2>
 
-    <div class="bar">
-        @for (product of productService.products(); track product.id) {
-            <div class="card">
-                <div class="image-wrap">
-                    <img [src]="product.image" alt="" />
-                </div>
+  <div class="bar">
+    @for (product of productService.products(); track product.id) {
+      <div class="card">
+        <div class="image-wrap">
+          <img [src]="product.image" alt="" />
+        </div>
 
-                <h3>{{ product.name }}</h3>
+        <h3>{{ product.name }}</h3>
 
-                <p class="price">
-                    Price: <span>{{ product.price }}</span> грн
-                </p>
+        <p class="price">
+          Price: <span>{{ product.price }}</span> грн
+        </p>
 
-                <button (click)="productService.increment(product.id)">
-                    BUY
-                </button>
-            </div>
-        }
-    </div>
+        <button class="btn" (click)="productService.increment(product.id)">BUY</button>
+      </div>
+    }
+  </div>
 </section>

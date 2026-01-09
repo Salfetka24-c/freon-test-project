@@ -12,7 +12,6 @@ import { ReviewCard } from '../rewiews-card/rewiews-card';
   styleUrls: ['./reviews.scss'],
 })
 export class ReviewsComponent {
-
   service = inject(ReviewsService);
 
   constructor(public modal: ModalService) {}

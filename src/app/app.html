@@ -1,19 +1,17 @@
 <app-header></app-header>
-@if (modal.is('callback')) {
-<app-callback-modal>
-</app-callback-modal>
-}
-
-<app-hero-section></app-hero-section>
+<app-main-section></app-main-section>
 <app-advantages></app-advantages>
-@if (modal.is('certificates')) {
-<app-certificates-modal>
-</app-certificates-modal>
-}
 <app-vitrine></app-vitrine>
 <app-assortiment></app-assortiment>
 <app-reviews></app-reviews>
-@if (modal.is('feedback')) {
-<app-feedback-modal></app-feedback-modal>
-}
 <app-order></app-order>
+
+@if (modal.is('callback')) {
+  <app-callback-modal> </app-callback-modal>
+}
+@if (modal.is('certificates')) {
+  <app-certificates-modal> </app-certificates-modal>
+}
+@if (modal.is('feedback')) {
+  <app-feedback-modal></app-feedback-modal>
+}

@@ -50,19 +50,23 @@ export class ProductService {
 
   increment(id: number) {
     this.products.update((list) =>
-      list.map((item) => (item.id === id ? { ...item, qty: Math.min(item.qty + 1, this.MAX_QTY) } : item))
+      list.map((item) =>
+        item.id === id ? { ...item, qty: Math.min(item.qty + 1, this.MAX_QTY) } : item,
+      ),
     );
   }
 
   decrement(id: number) {
     this.products.update((list) =>
-      list.map((item) => (item.id === id ? { ...item, qty: Math.max(item.qty - 1, 0) } : item))
+      list.map((item) => (item.id === id ? { ...item, qty: Math.max(item.qty - 1, 0) } : item)),
     );
   }
 
   setQty(id: number, value: number) {
     const safe = Math.max(0, Math.min(this.MAX_QTY, value || 0));
 
-    this.products.update((list) => list.map((item) => (item.id === id ? { ...item, qty: safe } : item)));
+    this.products.update((list) =>
+      list.map((item) => (item.id === id ? { ...item, qty: safe } : item)),
+    );
   }
 }

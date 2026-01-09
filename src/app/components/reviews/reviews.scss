@@ -1,5 +1,4 @@
 .reviews-section {
-  background-color: #a8c9ea;
   padding: 60px 20px;
   text-align: center;
   color: #9ecbff;
@@ -15,23 +14,5 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
-
-    
-    }
-
-    .feedback-btn {
-      margin-top: 40px;
-      background-color: #55a7e0;
-      border: none;
-      padding: 12px 40px;
-      border-radius: 8px;
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-
-      &:hover {
-        background-color: #3f87b8;
-      }
-    }
   }
+}

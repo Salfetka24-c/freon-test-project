@@ -1,27 +1,22 @@
 <section class="advantages-section">
+  <div class="bg-rain"></div>
+  <div class="bg-steam"></div>
+  <div class="overlay"></div>
 
-    <div class="bg-rain"></div>
-    <div class="bg-steam"></div>
-    <div class="overlay"></div>
-
-
-    <div class="content">
-    
-        <div class="titles">
-            <p class="small-title">ADVANTAGES</p>
-            <p class="big-title">ADVANTAGES</p>
-        </div>
-    
-        <div class="bar">
-            @for (item of service.advantages(); track item.id) {
-            <app-advantages-card [data]="item" />
-            }
-        </div>
-        <div class="bottom">
-            <button (click)="modal.open('certificates')">
-                CERTIFICATES
-            </button>
-        </div>
+  <div class="content">
+    <div class="titles">
+      <p class="small-title">ADVANTAGES</p>
+      <p class="big-title">ADVANTAGES</p>
     </div>
-    
+
+    <div class="bar">
+      @for (item of service.advantages(); track item.id) {
+        <app-advantages-card [data]="item" />
+      }
+    </div>
+
+    <div class="bottom">
+      <button class="btn" (click)="modal.open('certificates')">CERTIFICATES</button>
+    </div>
+  </div>
 </section>

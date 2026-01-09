@@ -15,10 +15,8 @@
   margin: 0 auto;
   padding: 30px 40px;
   border-radius: 14px;
-  background: linear-gradient(180deg, #0b0f14, #05070a);
   box-shadow: 0 0 40px rgba(0, 160, 255, 0.15);
 }
-
 
 .order-head {
   display: grid;
@@ -28,14 +26,12 @@
   font-size: 14px;
 }
 
-
 .order-row {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr 2fr;
   align-items: center;
   padding: 22px 0;
 }
-
 
 .product {
   display: flex;
@@ -53,7 +49,6 @@
   }
 }
 
-
 .qty {
   display: flex;
   align-items: center;
@@ -63,7 +58,6 @@
     width: 38px;
     height: 38px;
     border-radius: 8px;
-    background: #0e1620;
     border: 1px solid #1c2a3a;
     color: #4db7ff;
     font-size: 20px;
@@ -73,15 +67,12 @@
   input {
     width: 44px;
     text-align: center;
-    background: #0e1620;
     border: 1px solid #1c2a3a;
-    color: #fff;
     border-radius: 8px;
     font-size: 18px;
     padding: 6px 0;
   }
 }
-
 
 .price,
 .amount {
@@ -94,13 +85,11 @@
   }
 }
 
-
 .divider {
   height: 1px;
-  background: linear-gradient(to right, transparent, #2b4c66, transparent);
+  // background: linear-gradient(to right, transparent, #2b4c66, transparent);
   margin: 32px 0;
 }
-
 
 .order-footer {
   display: grid;
@@ -115,14 +104,4 @@
 .total-qty,
 .total-price {
   font-size: 22px;
-}
-
-.order-btn {
-  padding: 14px 28px;
-  border-radius: 8px;
-  background: linear-gradient(180deg, #6bbcff, #4da3e0);
-  border: none;
-  color: #000;
-  font-weight: 700;
-  cursor: pointer;
 }

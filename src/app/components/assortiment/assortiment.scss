@@ -1,7 +1,6 @@
 .assortiment {
   width: 100%;
   padding: 80px 40px 120px;
-  background: radial-gradient(circle at center, #ffffff 0%, #8ba5cd 60%, #b8cefa 100%);
   text-align: center;
 }
 
@@ -22,19 +21,15 @@
 .card {
   width: 260px;
   min-height: 520px;
-  background: linear-gradient(180deg, #83baf1, #83b4f3);
   border-radius: 12px;
   padding: 24px 20px 32px;
   position: relative;
+  box-shadow: var(--light-shadow);
+  transition: 0.25s ease box-shadow;
 
-  box-shadow: 0 0 0 1px rgba(120, 190, 255, 0.15), 0 0 25px rgba(80, 160, 255, 0.15);
-
-  transition: 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 0 1px rgba(120, 190, 255, 0.35), 0 0 40px rgba(80, 160, 255, 0.35);
+  &:hover {
+    box-shadow: var(--dark-shadow);
+  }
 }
 
 .image-wrap {
@@ -68,21 +63,4 @@
   color: #6bb6ff;
   font-size: 22px;
   font-weight: 600;
-}
-
-.card button {
-  background: linear-gradient(180deg, #6bb6ff, #4aa3e0);
-  border: none;
-  border-radius: 6px;
-  padding: 12px 0;
-  width: 120px;
-  color: #fff;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.card button:hover {
-  filter: brightness(1.1);
-  transform: scale(1.05);
 }
