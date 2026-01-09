@@ -23,9 +23,6 @@ export class Order {
     const value = Number(rawValue);
 
     if (isNaN(value)) return;
-
-    this.productService.
-
     this.productService.setQty(id, value);
   }
 }

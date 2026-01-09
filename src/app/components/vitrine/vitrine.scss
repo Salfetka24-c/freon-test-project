@@ -7,7 +7,7 @@
   color: #cfe9ff;
 }
 
-/* LEFT */
+
 .side-balloons {
   width: 120px;
   display: flex;
@@ -32,7 +32,6 @@
   }
 }
 
-/* CENTER */
 .center {
   flex: 1;
   display: flex;
@@ -45,7 +44,6 @@
   height: 520px;
 }
 
-/* MASK */
 .circle-mask {
   position: absolute;
   inset: 14%;
@@ -80,7 +78,7 @@
   opacity: 0.4;
 }
 
-/* BALLOON */
+
 .balloon-image {
   position: absolute;
   width: 52%;
@@ -91,7 +89,7 @@
   animation: fadeScale 0.6s ease;
 }
 
-/* RING */
+
 .progress-ring {
   position: absolute;
   inset: 0;
@@ -116,7 +114,6 @@
   }
 }
 
-/* RIGHT */
 .info {
   width: 380px;
 }
@@ -127,7 +124,7 @@
   margin: 24px 0;
 }
 
-/* misc */
+
 @keyframes fadeScale {
   from {
     opacity: 0;

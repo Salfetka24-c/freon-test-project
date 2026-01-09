@@ -2,7 +2,7 @@
     <h2 class="order-title">MAKE ORDER</h2>
 
     <div class="order-card">
-        <!-- Header -->
+
         <div class="order-head">
             <span>Name</span>
             <span>Quantity</span>
@@ -10,17 +10,16 @@
             <span>Amount</span>
         </div>
 
-        <!-- Rows -->
+
         <div class="order-rows">
             @for (product of productService.products(); track product.id) {
             <div class="order-row">
-                <!-- Product -->
+         
                 <div class="cell product">
                     <img [src]="product.image" alt="" />
                     <strong>{{ product.name }}</strong>
                 </div>
 
-                <!-- Quantity -->
                 <div class="cell qty">
                     <button (click)="productService.decrement(product.id)">−</button>
 
@@ -30,12 +29,10 @@
                     <button (click)="productService.increment(product.id)">+</button>
                 </div>
 
-                <!-- Price -->
                 <div class="cell price">
                     {{ product.price }} <small>euro</small>
                 </div>
 
-                <!-- Amount -->
                 <div class="cell amount">
                     {{ product.qty * product.price }} <small>euro</small>
                 </div>
@@ -45,7 +42,7 @@
 
         <div class="divider"></div>
 
-        <!-- Footer -->
+ 
         <div class="order-footer">
             <span class="together">Together</span>
             <span class="total-qty">{{ totalQty }}</span>

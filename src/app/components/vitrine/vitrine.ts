@@ -44,10 +44,7 @@ export class Vitrine implements OnInit, OnDestroy {
 
   next(): void {
     this.activeIndex = (this.activeIndex + 1) % this.ballonsImgSrc.length;
-
-    // перезапуск CSS-анімації
     this.ringKey++;
-
     this.cdr.detectChanges();
   }
 

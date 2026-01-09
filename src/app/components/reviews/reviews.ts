@@ -5,7 +5,7 @@ import { ModalService } from '../../services/modal.service';
 @Component({
   selector: 'app-reviews',
   standalone: true,
-  imports: [CommonModule], // ← ОСЬ ЦЕ ГОЛОВНЕ
+  imports: [CommonModule],
   templateUrl: './reviews.html',
   styleUrls: ['./reviews.scss'],
 })

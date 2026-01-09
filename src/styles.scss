@@ -1,12 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-/* Скидаємо всі відступи та падінги */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Скидаємо відступи у html, body та app-root */
 html,
 body,
 app-root {
