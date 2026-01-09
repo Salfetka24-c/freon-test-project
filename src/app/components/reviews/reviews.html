@@ -2,20 +2,14 @@
     <p class="reviews-title">REVIEWS</p>
 
     <div class="reviews-container">
-        @for (review of reviews; track review.id) {
-        <div class="review-card">
-            <div class="avatar">
-                <img class="avatar-photo" src="/assets/reviews/Ellipse.png" alt="avatar" />
-                <img class="avatar-frame" src="/assets/reviews/border.png" alt="frame" />
-            </div>
-            <div class="review-text">
-                <p class="review-name">{{ review.name }}</p>
-                <p class="review-content">{{ review.content }}</p>
-            </div>
-        </div>
+
+        @for (review of service.reviews(); track review.id) {
+        <app-review-card [data]="review" />
         }
+
         <button class="feedback-btn" (click)="modal.open('feedback')">
             WRITE FEEDBACK
         </button>
+
     </div>
 </div>

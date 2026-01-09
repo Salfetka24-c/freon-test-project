@@ -1,10 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { Header } from './components/header/header';
 import { HeroSection } from './components/hero-section/hero-section';
-import { Advantages } from './components/advantages/advantages';
+import { AdvantagesComponent } from './components/advantages/advantages';
 import { Vitrine } from './components/vitrine/vitrine';
 import { Assortiment } from './components/assortiment/assortiment';
-import { Reviews } from './components/reviews/reviews';
+import { ReviewsComponent } from './components/reviews/reviews';
 import { Order } from './components/order/order';
 import { ModalService } from './services/modal.service';
 import { CallbackModal } from './modals/callback-modal/callback-modal';
@@ -17,10 +17,10 @@ import { FeedbackModal } from './modals/feedback-modal/feedback-modal';
   imports: [
     Header,
     HeroSection,
-    Advantages,
+    AdvantagesComponent,
     Vitrine,
     Assortiment,
-    Reviews,
+    ReviewsComponent,
     Order,
     CallbackModal,
     CertificatesModal,

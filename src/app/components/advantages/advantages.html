@@ -6,41 +6,22 @@
 
 
     <div class="content">
+    
         <div class="titles">
             <p class="small-title">ADVANTAGES</p>
             <p class="big-title">ADVANTAGES</p>
         </div>
-
+    
         <div class="bar">
-            <div class="card">
-                <img src="/assets/advantages/smile.png" />
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-
-            <div class="card">
-                <img src="/assets/advantages/smile.png" />
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-
-            <div class="card">
-                <img src="/assets/advantages/smile.png" />
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-
-            <div class="card">
-                <img src="/assets/advantages/smile.png" />
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
+            @for (item of service.advantages(); track item.id) {
+            <app-advantages-card [data]="item" />
+            }
         </div>
-
         <div class="bottom">
             <button (click)="modal.open('certificates')">
                 CERTIFICATES
             </button>
         </div>
     </div>
+    
 </section>
