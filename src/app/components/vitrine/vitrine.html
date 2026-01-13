@@ -1,40 +1,48 @@
 <div class="vitrine">
-  <div class="side-balloons">
-    @for (imgSrc of ballonsImgSrc; track imgSrc; let i = $index) {
-      <div class="side-balloon" [class.active]="i === activeIndex" (click)="select(i)">
-        <img [src]="imgSrc" />
-      </div>
-    }
-  </div>
-
-  <div class="center">
-    <div class="circle">
-      <div class="circle-mask">
-        <img class="snow back" src="assets/header/snow_back.png" />
-        <img class="palm" src="assets/header/palm2.png" />
-        <img class="snow front" src="assets/header/snow_front.png" />
-      </div>
-
-      <svg class="progress-ring" viewBox="0 0 100 100" [attr.data-key]="ringKey">
-        <circle cx="50" cy="50" r="48" />
-      </svg>
-
-      <img class="balloon-image" [src]="ballonsImgSrc[activeIndex]" />
-    </div>
-  </div>
-
-  <div class="info">
-    <h2>Freon</h2>
-    <span class="code">134A</span>
-    <p>Reliable solution for commercial refrigeration and air conditioners.</p>
-
-    <div class="applications">
-      <img src="assets/applications/conditioner.png" />
-      <img src="assets/applications/car.png" />
-      <img src="assets/applications/truck.png" />
-      <img src="assets/applications/industrial.png" />
+  <div class="wrap">
+    <div class="side-balloons">
+      @for (b of items; track b.image; let i = $index) {
+        <div class="side-balloon" [class.active]="i === activeIndex" (click)="select(i)">
+          <img [src]="b.image" />
+        </div>
+      }
     </div>
 
-    <button>MAKE ORDER</button>
+    <div class="center">
+      <div class="circle">
+        <div class="circle-mask">
+          <img class="back" src="assets/header/snow_back.png" />
+          <img class="palm" src="assets/header/palm2.png" />
+
+          @if (items.length) {
+            <img class="balloon-image" [src]="items[activeIndex].image" />
+          }
+
+          <img class="front" src="assets/header/snow_front.png" />
+        </div>
+
+        <svg class="progress-ring" viewBox="0 0 100 100" [attr.data-key]="ringKey">
+          <circle cx="50" cy="50" r="49.25" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="info">
+      @if (items.length) {
+        <h2>{{ items[activeIndex].title }}</h2>
+        <span class="code">{{ items[activeIndex].code }}</span>
+
+        <p>{{ items[activeIndex].description }}</p>
+
+        <h5>Applications</h5>
+        <div class="applications">
+          @for (app of items[activeIndex].applications; track app) {
+            <img [src]="app" />
+          }
+        </div>
+      }
+
+      <button class="btn buttonfix">MAKE ORDER</button>
+    </div>
   </div>
 </div>

@@ -6,7 +6,6 @@ header {
   align-items: center;
   padding: 0 32px;
 }
-
 .logo {
   height: 56px;
 }
@@ -35,15 +34,15 @@ header {
 }
 
 .callback {
-  background: #55a7e0;
+  background: var(--main-light);
   color: white;
   border: none;
 }
 
 .phone {
   background: transparent;
-  color: #9fd6ff;
-  border: 1px solid #2b4c66;
+  color: var(--main-light);
+  border: 1px solid var(--main-dark);
 }
 
 .lang {
@@ -51,8 +50,8 @@ header {
   align-items: center;
   gap: 6px;
   padding: 12px 14px;
-  border: 1px solid #2b4c66;
+  border: 1px solid var(--main-dark);
   border-radius: 10px;
-  color: #9fd6ff;
+  color: var(--main-light);
   cursor: pointer;
 }

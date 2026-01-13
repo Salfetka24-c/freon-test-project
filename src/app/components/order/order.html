@@ -25,6 +25,7 @@
               type="number"
               min="0"
               max="1000"
+              class="input"
               [value]="product.qty"
               (keydown.enter)="applyQty(product.id, qtyInput.value)"
               (blur)="applyQty(product.id, qtyInput.value)"
@@ -48,5 +49,11 @@
       <span class="total-price">{{ totalPrice }} euro</span>
       <button class="btn">MAKE ORDER</button>
     </div>
+  </div>
+
+  <div class="bg-container">
+    <div class="bg-rain"></div>
+    <div class="bg-steam"></div>
+    <div class="overlay"></div>
   </div>
 </section>

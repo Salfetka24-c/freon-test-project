@@ -1,4 +1,4 @@
-@import "./app/styles/btn";
+@use "./app/styles/btn";
 
 :root {
   --main-light: #6cc0f2;
@@ -9,8 +9,6 @@
   --btn-trans: 0.3s;
   --light-shadow: 0px 0px 0.852vh rgba(68, 153, 217, 0.3);
   --dark-shadow: 0px 0px 0.852vh rgba(68, 153, 217, 0.8);
-
-  --header-height: 95px;
 }
 
 * {
@@ -51,11 +49,27 @@ app-root {
   margin-bottom: 20px;
 }
 
+.input {
+  min-width: 40px;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  box-shadow: inset var(--light-shadow);
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--gray);
+  padding: 6px 0;
+}
+
 .modal input,
 .modal textarea {
   width: 100%;
   background: #92bce7;
-  border: 1px solid #1f2a36;
+  // border: 1px solid #1f2a36;
   color: #fff;
   padding: 12px;
   border-radius: 8px;
@@ -74,4 +88,14 @@ app-root {
 
 * {
   font-family: "Roboto", sans-serif;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }

@@ -4,8 +4,10 @@
   gap: 16px;
   border-radius: 16px;
   padding: 20px;
-  max-width: 700px;
+
   width: 100%;
+  width: 800px;
+  margin: 0 auto;
   box-shadow: 0 0 12px rgba(0, 156, 255, 0.2);
 
   .avatar {
@@ -19,8 +21,8 @@
     justify-content: center;
 
     .avatar-photo {
-      width: 92px;
-      height: 92px;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
       object-fit: cover;
       z-index: 1;
@@ -37,16 +39,24 @@
 
   .review-text {
     text-align: left;
+    flex-grow: 1;
 
     .review-name {
-      font-weight: 700;
-      color: #9ecbff;
-      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1.25vw;
+      line-height: 1.29;
+      color: var(--main-dark);
     }
 
     .review-content {
-      font-size: 14px;
-      color: #c4d2f0;
+      font-weight: 300;
+      font-size: 0.9375vw;
+      line-height: 1.5;
+      color: var(--gray);
+      .review-content {
+        white-space: normal !important;
+        word-break: break-word;
+      }
     }
   }
 }

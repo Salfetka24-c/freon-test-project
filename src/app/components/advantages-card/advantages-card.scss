@@ -24,13 +24,13 @@
   }
 
   h3 {
-    color: #8ec6ff;
+    color: var(--main-light);
     margin-bottom: 16px;
     font-size: 20px;
   }
 
   p {
-    color: #8a8a8a;
+    color: var(--gray);
     font-size: 14px;
     line-height: 1.6;
   }

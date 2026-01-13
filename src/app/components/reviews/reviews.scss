@@ -1,18 +1,26 @@
 .reviews-section {
   padding: 60px 20px;
   text-align: center;
-  color: #9ecbff;
+  color: var(--main-light);
 
   .reviews-title {
-    font-size: 24px;
     font-style: italic;
-    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 1.875vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-dark);
+    margin-bottom: 60px;
   }
 
   .reviews-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 24px;
   }
+}
+.fix {
+  max-width: 240px;
+  display: flex;
+  align-self: center;
 }

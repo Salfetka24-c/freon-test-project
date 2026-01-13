@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, ChangeDetectorRef, inject } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
+import { VitrineService, VitrineItem } from '../../services/vitrine.service';
 
 @Component({
   selector: 'app-vitrine',
@@ -12,14 +13,9 @@ import { PLATFORM_ID } from '@angular/core';
 export class Vitrine implements OnInit, OnDestroy {
   private platformId = inject(PLATFORM_ID);
   private cdr = inject(ChangeDetectorRef);
+  private vitrineService = inject(VitrineService);
 
-  ballonsImgSrc = [
-    'assets/ballons/aqua512.png',
-    'assets/ballons/blue512.png',
-    'assets/ballons/orange512.png',
-    'assets/ballons/pink512.png',
-    'assets/ballons/red512.png',
-  ];
+  items: VitrineItem[] = [];
 
   activeIndex = 0;
   ringKey = 0;
@@ -27,6 +23,8 @@ export class Vitrine implements OnInit, OnDestroy {
   private timer?: ReturnType<typeof setInterval>;
 
   ngOnInit(): void {
+    this.items = this.vitrineService.getItems();
+
     if (isPlatformBrowser(this.platformId)) {
       setTimeout(() => this.start(), 0);
     }
@@ -43,7 +41,9 @@ export class Vitrine implements OnInit, OnDestroy {
   }
 
   next(): void {
-    this.activeIndex = (this.activeIndex + 1) % this.ballonsImgSrc.length;
+    if (!this.items.length) return;
+
+    this.activeIndex = (this.activeIndex + 1) % this.items.length;
     this.ringKey++;
     this.cdr.detectChanges();
   }
